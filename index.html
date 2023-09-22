@@ -33,12 +33,67 @@
         
     </main>
     <footer>
-        <h2>Deixe seu comentario:
-        </h2>
-        
+        <h1>Comentários</h1>
+
+   
+  
+        <form id="comment-form">
+            <label for="name">Seu Nome:</label>
+            <input type="text" id="name" placeholder="Digite seu nome">
+            <br>
+            <label for="comment-text">Digite seu comentário:</label>
+            <br>
+            <textarea id="comment-text" rows="4" cols="50" placeholder="Escreva seu comentário aqui"></textarea>
+            <br>
+            <button type="submit">Enviar Comentário</button>
+        </form>
+
+        <!-- Campo de Comentários -->
+        <div id="comment-section">
+            <!-- Os comentários serão exibidos aqui -->
+        </div>
+    
+
+    <script>
+        // Array para armazenar os comentários
+        var comentarios = [];
+
+        // Função para adicionar um comentário
+        function adicionarComentario() {
+            var nome = document.getElementById('name').value;
+            var comentario = document.getElementById('comment-text').value;
+
+            var comentarioFormatado = nome + ': ' + comentario;
+            comentarios.push(comentarioFormatado);
+            exibirComentarios();
+
+            // Limpar campos
+            document.getElementById('name').value = '';
+            document.getElementById('comment-text').value = '';
+        }
+
+        // Função para exibir os comentários
+        function exibirComentarios() {
+            var commentSection = document.getElementById('comment-section');
+            commentSection.innerHTML = '';
+
+            for (var i = 0; i < comentarios.length; i++) {
+                var comentarioElement = document.createElement('p');
+                comentarioElement.textContent = comentarios[i];
+                commentSection.appendChild(comentarioElement);
+            }
+        }
+
+        // Adicionar um ouvinte de evento para o formulário
+        document.getElementById('comment-form').addEventListener('submit', function (e) {
+            e.preventDefault(); // Evita o envio do formulário padrão
+            adicionarComentario();
+        });
+    </script>
         
     </footer>
     <div>
+
 
     </div>
  

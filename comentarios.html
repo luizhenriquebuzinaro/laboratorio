@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentários</title>
+</head>
+<body>
+    <h1>Comentários</h1>
+    
+    <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="pt-br"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Comentários&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Comentários&lt;/h1&gt;
+            
+            &lt;pre&gt;
+                &amp;lt;p&amp;gt;&amp;lt;script&amp;gt;alert(23)&amp;lt;/script&amp;gt;: ola
+            &lt;/pre&gt;
+
+            &lt;script&gt;
+                // Array para armazenar os comentários
+                var comentarios = [];
+
+                // Função para adicionar um comentário
+                function adicionarComentario() {
+                    var nome = document.getElementById('name').value;
+                    var comentario = document.getElementById('comment-text').value;
+                    
+                    if (nome.trim() === '' || comentario.trim() === '') {
+                        alert('Por favor, preencha todos os campos.');
+                        return;
+                    }
+                    
+                    var comentarioFormatado = nome + ': ' + comentario;
+                    comentarios.push(comentarioFormatado);
+                    exibirComentarios();
+                    
+                    // Limpar campos
+                    document.getElementById('name').value = '';
+                    document.getElementById('comment-text').value = '';
+                }
+
+                // Função para exibir os comentários
+                function exibirComentarios() {
+                    var commentSection = document.getElementById('comment-section');
+                    commentSection.innerHTML = '';
+
+                    for (var i = 0; i < comentarios.length; i++) {
+                        var comentarioElement = document.createElement('p');
+                        comentarioElement.textContent = comentarios[i];
+                        commentSection.appendChild(comentarioElement);
+                    }
+                }
+
+                // Adicionar um ouvinte de evento para o formulário
+                document.getElementById('comment-form').addEventListener('submit', function (e) {
+                    e.preventDefault(); // Evita o envio do formulário padrão
+                    adicionarComentario();
+                });
+            &lt;/script&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </pre>
+</body>
+</html>
