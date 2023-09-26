@@ -1,11 +1,13 @@
 @charset "UTF-8";
-
+:root{
+    --cor0:#202022;
+}
 body{
     
-    background-image: linear-gradient(to right, #14140F,#053D38, #34675C );
-
+    background-image: linear-gradient(to right, #14140F,#053D38,#34675C);
+  
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: white;
+    color:--branco;
     margin-top: -22px;
     margin-left: 2px;
     margin-right: 1px;
@@ -14,19 +16,24 @@ body{
     
 
 header{
-    background-color:#202022;
+    background-color:var(--cor0);
     height: 70px;
     width: 100%;
     position: fixed;
 }
 nav{
-    background-color: #202022;
+    background-color:var(--cor0);
+    padding: 60px;
+    padding-top: 64px;
+    margin-top: -16px;
+    padding-bottom: 0px;
+    padding-left: 23px;
 }
 main{ 
 
     position: static;
     font-size: xx-large;
-    background-color:#202022;
+    background-color:var(--cor0);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     height: 80%;
     width: 80%;
@@ -39,7 +46,7 @@ main{
 }
 footer{
     font-size: xx-large;
-    background-color:#202022;
+    background-color:var(--cor0);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     height: 90%;
     width: 80%;
@@ -79,7 +86,7 @@ iframe{
 /* Works on Firefox */
 * {
     scrollbar-width: thin;
-    scrollbar-color: #202022 rgb(150, 145, 137);
+    scrollbar-color: --cor00, var(--cor2);
   }
   
   /* Works on Chrome, Edge, and Safari */
