@@ -11,6 +11,7 @@ body{
     margin-top: -22px;
     margin-left: 2px;
     margin-right: 1px;
+    margin-bottom: -24px;
 }
 header{
     color:cadetblue;
@@ -23,8 +24,8 @@ nav{
     background-color:var(--cor0);
     padding: 60px;
     padding-top: 75px;
-    margin-top: -16px;
-    padding-bottom: 50px;
+    padding-top: 90px;
+    margin-top: -17px;
     padding-bottom: 0px;
     padding-left: 23px;
     box-shadow: 1px 1px 10px black;
@@ -33,9 +34,7 @@ nav{
 nav > a{
     color:rgba(0, 255, 255, 0.589);
     padding-left: 10px;
-   
-    text-decoration: overline;
-    text-transform: lowercase;
+    text-decoration: none;
 }
 nav> a:hover{
     color:aqua;
@@ -53,7 +52,7 @@ main{
     margin: auto;
     margin-top: -20px;
     padding-top: px;
-    padding-left: 50px;
+    padding-left: 22px;
     padding-right: 10px;
     padding-bottom: 20px;
     box-shadow: 5px  5px 10px black;
@@ -93,6 +92,7 @@ div.video{
     
     position: relative;
     padding-bottom: 57%;
+
     
 }
 div.video>iframe{
@@ -100,7 +100,8 @@ div.video>iframe{
     height: 90%;
     width: 90%;
     top: 5%;
-    left: 5%;
+    left: 3%;
+    right: 5%;
    
 }
 /*width: 90%;
