@@ -90,14 +90,15 @@ main > ul> img {
 
 div.video{
     background:var(--cor0);
-    margin-bottom: 59%;
+    
     position: relative;
-   
+    padding-bottom: 57%;
+    
 }
 div.video>iframe{
     position: absolute;
-    width: 90%;
     height: 90%;
+    width: 90%;
     top: 5%;
     left: 5%;
    
